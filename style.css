@@ -1224,6 +1224,10 @@ html.js-ready [data-reveal].is-revealed {
   color: var(--accent-text);
 }
 
+.gallery-caption {
+  display: block;
+}
+
 .gallery-caption strong {
   display: block;
   font-family: "Oswald", sans-serif;
