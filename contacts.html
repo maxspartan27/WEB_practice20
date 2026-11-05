@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="uk" data-theme="night">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#080e16">
+  <meta name="description" content="Сформуйте текст заявки на тренування у PULSEFORGE та завантажте двосторінковий PDF-гід із тренувань. Локальна форма без передавання даних на сервер.">
+  <meta name="author" content="Максим Ковалишин">
+  <meta property="og:title" content="Контакти та заявка | PULSEFORGE">
+  <meta property="og:description" content="Конструктор тексту заявки на тренування та PDF-гід із тренувань і відновлення.">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="PULSEFORGE_theme_preview.jpg">
+  <title>Контакти | PULSEFORGE</title>
+  <link rel="icon" type="image/svg+xml" href="favicon.svg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Oswald:wght@500;600;700&display=swap">
+  <link rel="stylesheet" href="style.css">
+  <script>try{const m=localStorage.getItem('pf-theme-v1')||'night',r=m==='auto'?(matchMedia('(prefers-color-scheme: light)').matches?'day':'night'):m;if(['night','ember','forest','ocean','day'].includes(r))document.documentElement.dataset.theme=r;}catch(e){}</script>
+  <script src="script.js" defer></script>
+</head>
+<body data-page="contacts">
+  <a class="skip-link" href="#main">Перейти до вмісту</a>
+  <div class="site-shell">
+    <header class="site-header" id="top">
+      <div class="topline">
+        <span class="signal-dot"></span> PULSEFORGE <span class="topline-sep">/</span> SPORT &amp; MOTION
+        <span class="topline-right">ПРАКТИЧНА РОБОТА №15 · ВАРІАНТ 5</span>
+      </div>
+      <div class="nav-shell container">
+        <a class="logo" href="index.html" aria-label="PULSEFORGE, головна">
+          <span class="logo-glyph">P<span>F</span><b>✦</b></span>
+          <span class="logo-word">PULSE<span>FORGE</span><small>FITNESS CLUB</small></span>
+        </a>
+        <button class="mobile-toggle" id="mobileToggle" type="button" aria-label="Відкрити меню" aria-controls="mainNav" aria-expanded="false">
+          <span></span><span></span><span></span>
+        </button>
+        <nav class="main-nav" id="mainNav" aria-label="Основна навігація">
+          <a href="index.html">Головна</a>
+          <a href="schedule.html">Розклад</a>
+          <a href="coaches.html">Тренери</a>
+          <a href="contacts.html" aria-current="page">Контакти</a>
+        </nav>
+        <div class="nav-actions">
+          <button class="theme-trigger" id="themeTrigger" type="button" aria-controls="themePanel" aria-expanded="false">
+            <span class="theme-palette" aria-hidden="true">◐</span>
+            <span>Теми</span>
+            <span class="chev" aria-hidden="true">⌄</span>
+          </button>
+          <a class="button button-small button-primary nav-cta" href="contacts.html#request">Приєднатися <span aria-hidden="true">↗</span></a>
+        </div>
+      </div>
+
+      <div class="theme-panel" id="themePanel" hidden>
+        <div class="theme-panel-top">
+          <b>Обери атмосферу клубу</b>
+          <span class="theme-panel-hint">Alt + T</span>
+          <button type="button" class="close-minimal" id="themeClose" aria-label="Закрити вибір тем">×</button>
+        </div>
+        <div class="theme-choices">
+          <button class="theme-choice" type="button" data-theme-choice="night" aria-label="Тема Cyber Night">
+            <img src="images/thumb-night.webp" width="400" height="200" alt="" loading="lazy" decoding="async">
+            <div class="theme-choice-meta"><i class="theme-swatch" style="background:#66f5ce"></i><span>Cyber Night</span></div>
+            <small>Неон / темна</small>
+          </button>
+          <button class="theme-choice" type="button" data-theme-choice="ember" aria-label="Тема Solar Rush">
+            <img src="images/thumb-ember.webp" width="400" height="200" alt="" loading="lazy" decoding="async">
+            <div class="theme-choice-meta"><i class="theme-swatch" style="background:#ffb36a"></i><span>Solar Rush</span></div>
+            <small>Енергія / бурштинова</small>
+          </button>
+          <button class="theme-choice" type="button" data-theme-choice="forest" aria-label="Тема Forest Motion">
+            <img src="images/thumb-forest.webp" width="400" height="200" alt="" loading="lazy" decoding="async">
+            <div class="theme-choice-meta"><i class="theme-swatch" style="background:#9ef29b"></i><span>Forest Motion</span></div>
+            <small>Біофілія / смарагдова</small>
+          </button>
+          <button class="theme-choice" type="button" data-theme-choice="ocean" aria-label="Тема Arctic Pulse">
+            <img src="images/thumb-ocean.webp" width="400" height="200" alt="" loading="lazy" decoding="async">
+            <div class="theme-choice-meta"><i class="theme-swatch" style="background:#5cc8ff"></i><span>Arctic Pulse</span></div>
+            <small>Техно / крижана синя</small>
+          </button>
+          <button class="theme-choice" type="button" data-theme-choice="day" aria-label="Тема Light Studio">
+            <img src="images/thumb-day.webp" width="400" height="200" alt="" loading="lazy" decoding="async">
+            <div class="theme-choice-meta"><i class="theme-swatch" style="background:#28664e"></i><span>Light Studio</span></div>
+            <small>Мінімалізм / світла</small>
+          </button>
+          <button class="theme-choice" type="button" data-theme-choice="auto" aria-label="Системна тема Auto Sync">
+            <img src="images/thumb-auto.webp" width="400" height="200" alt="" loading="lazy" decoding="async">
+            <div class="theme-choice-meta"><i class="theme-swatch" style="background:linear-gradient(135deg,#66f5ce,#f6f5ef)"></i><span>Auto Sync</span></div>
+            <small>Адаптація до ОС</small>
+          </button>
+        </div>
+        <p class="theme-note">
+          <span>Кожна тема змінює палітру та фонову фотографію простору.</span>
+          <span>Зберігається локально</span>
+        </p>
+      </div>
+    </header>
+
+    <main id="main">
+      <section class="page-hero">
+        <div class="page-hero-image"></div>
+        <div class="container page-hero-inside">
+          <div class="section-kicker">НАСТУПНИЙ КРОК — ЗА ТОБОЮ</div>
+          <h1>Залишайся <em>на зв’язку.</em></h1>
+          <p>Підготуй структурований текст запиту для запису на тренування та завантаж ілюстрований двосторінковий PDF-гід.</p>
+          <div class="crumbs"><a href="index.html">Головна</a><span>/</span> Контакти</div>
+        </div>
+      </section>
+
+      <section class="section container contacts-section" data-reveal>
+        <div class="contact-layout">
+          <div>
+            <div class="section-kicker">НА ЗВ’ЯЗКУ / ДЕМОСАЙТ</div>
+            <h2>Питання?<br><span class="muted">Почни з нас.</span></h2>
+            <p class="contact-intro">Це навчальний демонстраційний проєкт, тому тут не вказано вигаданих телефонів або комерційних реквізитів. Інтерактивна форма нижче генерує готовий текст звернення, який можна скопіювати чи зберегти у файл.</p>
+
+            <div class="guide-preview-card">
+              <img src="images/program-functional-sm.webp" width="640" height="480" loading="lazy" decoding="async" alt="Прев'ю навчального PDF-гіда PULSEFORGE">
+              <div class="guide-preview-body">
+                <small>БЕЗКОШТОВНИЙ МАТЕРІАЛ · PDF (2 СТОР.)</small>
+                <strong>Гід із тренувань та планер тижня</strong>
+                <p>Огляд 4 базових напрямів, правила безпечної розминки та друкований чекліст.</p>
+                <a class="text-link" href="docs/training-guide.pdf" target="_blank" rel="noopener">Відкрити PDF-гід <span aria-hidden="true">↗</span></a>
+              </div>
+            </div>
+
+            <div class="contact-info-list">
+              <div class="contact-info-item">
+                <span class="info-icon" aria-hidden="true">⌂</span>
+                <div>
+                  <b>Формат проєкту</b>
+                  <span>Навчальна демонстрація сучасної фронтенд-розробки (Практична робота №15)</span>
+                </div>
+              </div>
+              <div class="contact-info-item">
+                <span class="info-icon" aria-hidden="true">◷</span>
+                <div>
+                  <b>Години занять</b>
+                  <span>Переглянь актуальні слоти у <a href="schedule.html">розкладі клубу</a></span>
+                </div>
+              </div>
+            </div>
+
+            <div class="privacy-card">
+              <span aria-hidden="true">✦</span>
+              <div>
+                <strong>Повна приватність у браузері</strong>
+                <p>Жодні введені дані не передаються в мережу — чернетка формується виключно локально на твоєму пристрої.</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="request-card" id="request">
+            <div class="request-head">
+              <span class="form-kicker">CONTACT / 01</span>
+              <span class="request-deco" aria-hidden="true">✳</span>
+            </div>
+            <h3>Сформувати заявку</h3>
+            <p>Заповни обов’язкові поля — і отримай відформатований текст звернення в один клік.</p>
+
+            <form id="contactForm" novalidate>
+              <div class="form-row">
+                <label for="contactName">
+                  <span>Ім’я <span class="req">*</span></span>
+                  <input id="contactName" name="name" autocomplete="name" minlength="2" maxlength="80" required placeholder="Як до тебе звертатися?">
+                </label>
+                <label for="contactReply">
+                  <span>Електронна пошта <span class="req">*</span></span>
+                  <input type="email" id="contactReply" name="email" autocomplete="email" maxlength="120" required placeholder="name@example.com">
+                </label>
+              </div>
+
+              <label for="contactCategory">
+                <span>Напрям тренувань <span class="req">*</span></span>
+                <select id="contactCategory" name="category" required>
+                  <option value="" selected disabled>Оберіть напрям</option>
+                  <option>Силові тренування</option>
+                  <option>Кардіо та HIIT</option>
+                  <option>Функціональний тренінг</option>
+                  <option>Баланс і мобільність</option>
+                  <option>Потрібна індивідуальна консультація</option>
+                </select>
+              </label>
+
+              <label for="contactMessage">
+                <span class="label-row">
+                  <span>Повідомлення або ціль</span>
+                  <span class="char-count" id="charCount">0 / 1000</span>
+                </span>
+                <textarea id="contactMessage" name="message" rows="5" maxlength="1000" placeholder="Опиши бажаний графік, рівень підготовки або запитання…"></textarea>
+              </label>
+
+              <label class="check-line">
+                <input type="checkbox" id="contactConsent" required>
+                <span>Розумію, що це локальна демонстраційна форма без автоматичного надсилання на сервер. <b>*</b></span>
+              </label>
+
+              <button type="submit" class="button button-primary button-submit">
+                Створити текст заявки <span aria-hidden="true">↗</span>
+              </button>
+              <p class="form-footnote">* Поля з позначкою є обов’язковими для заповнення.</p>
+            </form>
+
+            <div id="draftArea" class="draft-area" hidden>
+              <h4>Готовий текст звернення</h4>
+              <textarea id="draftText" readonly rows="9" aria-label="Сформований текст заявки"></textarea>
+              <div class="draft-actions">
+                <button type="button" class="button button-primary" id="copyDraft">Скопіювати</button>
+                <button type="button" class="button button-outline" id="downloadDraft">Зберегти .txt</button>
+                <button type="button" class="button button-quiet" id="resetDraft">Очистити</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section container faq-section section-lazy" data-reveal>
+        <div class="section-head compact">
+          <div>
+            <div class="section-kicker">FAQ / ЗАПИТАННЯ</div>
+            <h2>Варто <span class="muted">знати.</span></h2>
+          </div>
+        </div>
+
+        <div class="faq-list">
+          <details>
+            <summary>Які теми оформлення підтримує сайт і як їх перемикати? <span>+</span></summary>
+            <p>Натисни кнопку «Теми» у шапці сайту або скористайся комбінацією клавіш <code>Alt + T</code>. Доступні 5 авторських фотографічних тем (Cyber Night, Solar Rush, Forest Motion, Arctic Pulse, Light Studio) та режим <strong>Auto Sync</strong>, який автоматично синхронізується зі світлою чи темною темою твоєї операційної системи.</p>
+          </details>
+          <details>
+            <summary>Як зберегти власний план тренувань та додати його до календаря? <span>+</span></summary>
+            <p>На сторінці «Розклад» натискай зірочку ★ біля потрібних занять — вони додадуться до вкладки «Мій план». Ти можеш завантажити як окреме тренування, так і весь свій план одним файлом <code>.ics</code> для імпорту в Google Calendar, Apple Calendar або Outlook.</p>
+          </details>
+          <details>
+            <summary>Чи працює вебсайт при відкритті локально з папки (file://) або без Інтернету? <span>+</span></summary>
+            <p>Так! Усі зображення оптимізовані у форматі WebP локально, а скрипти написані на чистому Vanilla JavaScript без серверних запитів, тому всі сторінки, таймер, галерея, теми та розклад повноцінно працюють навіть при відкритті напряму з диска.</p>
+          </details>
+          <details>
+            <summary>Як оптимізовано швидкодію та доступність вебсайту? <span>+</span></summary>
+            <p>Усунено блокуючі CSS-імпорти, впроваджено адаптивні зображення <code>srcset</code>/<code>sizes</code> у форматі WebP, ліниве завантаження <code>loading="lazy"</code>, <code>content-visibility: auto</code>, плавні переходи View Transitions API, повну клавіатурну навігацію та підтримку <code>prefers-reduced-motion</code>.</p>
+          </details>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container">
+        <div class="footer-main">
+          <div>
+            <a class="footer-brand" href="index.html">PULSE<span>FORGE</span><sup>✦</sup></a>
+            <p>Рух — це твоя суперсила. Модернізований навчальний вебсайт спортивного клубу з підтримкою 6 режимів тем.</p>
+          </div>
+          <div class="footer-links">
+            <a href="index.html">Головна</a>
+            <a href="schedule.html">Розклад</a>
+            <a href="coaches.html">Тренери</a>
+            <a href="contacts.html">Контакти</a>
+            <a href="index.html#gallery">Фотогалерея</a>
+            <a href="docs/training-guide.pdf" target="_blank" rel="noopener">PDF-гід</a>
+          </div>
+          <div class="footer-social">
+            <span>BUILD 2026 / PR15 V5 MODERN</span>
+            <a href="#top">До початку ↑</a>
+          </div>
+        </div>
+        <div class="footer-bottom">
+          <p>© 2026. Автор: <strong>Максим Ковалишин</strong>. Вміст захищено авторським правом. Усі права захищені.</p>
+          <small>Оптимізовано: HTML5 · Modern CSS · Vanilla JS · WebP</small>
+        </div>
+      </div>
+    </footer>
+  </div>
+
+  <button class="back-top" id="backTop" type="button" aria-label="Повернутися нагору">↑</button>
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+</body>
+</html>

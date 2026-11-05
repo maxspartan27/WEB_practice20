@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="uk" data-theme="night">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#080e16">
+  <meta name="description" content="Демонстраційні профілі тренерської команди спортивного клубу PULSEFORGE з індивідуальними портретами та спеціалізаціями.">
+  <meta name="author" content="Максим Ковалишин">
+  <meta property="og:title" content="Тренери | PULSEFORGE">
+  <meta property="og:description" content="Команда тренерів PULSEFORGE: силові, кардіо, функціональні та відновлювальні програми.">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="PULSEFORGE_theme_preview.jpg">
+  <title>Тренери | PULSEFORGE</title>
+  <link rel="icon" type="image/svg+xml" href="favicon.svg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Oswald:wght@500;600;700&display=swap">
+  <link rel="stylesheet" href="style.css">
+  <script>try{const m=localStorage.getItem('pf-theme-v1')||'night',r=m==='auto'?(matchMedia('(prefers-color-scheme: light)').matches?'day':'night'):m;if(['night','ember','forest','ocean','day'].includes(r))document.documentElement.dataset.theme=r;}catch(e){}</script>
+  <script src="script.js" defer></script>
+</head>
+<body data-page="coaches">
+  <a class="skip-link" href="#main">Перейти до вмісту</a>
+  <div class="site-shell">
+    <header class="site-header" id="top">
+      <div class="topline">
+        <span class="signal-dot"></span> PULSEFORGE <span class="topline-sep">/</span> SPORT &amp; MOTION
+        <span class="topline-right">ПРАКТИЧНА РОБОТА №15 · ВАРІАНТ 5</span>
+      </div>
+      <div class="nav-shell container">
+        <a class="logo" href="index.html" aria-label="PULSEFORGE, головна">
+          <span class="logo-glyph">P<span>F</span><b>✦</b></span>
+          <span class="logo-word">PULSE<span>FORGE</span><small>FITNESS CLUB</small></span>
+        </a>
+        <button class="mobile-toggle" id="mobileToggle" type="button" aria-label="Відкрити меню" aria-controls="mainNav" aria-expanded="false">
+          <span></span><span></span><span></span>
+        </button>
+        <nav class="main-nav" id="mainNav" aria-label="Основна навігація">
+          <a href="index.html">Головна</a>
+          <a href="schedule.html">Розклад</a>
+          <a href="coaches.html" aria-current="page">Тренери</a>
+          <a href="contacts.html">Контакти</a>
+        </nav>
+        <div class="nav-actions">
+          <button class="theme-trigger" id="themeTrigger" type="button" aria-controls="themePanel" aria-expanded="false">
+            <span class="theme-palette" aria-hidden="true">◐</span>
+            <span>Теми</span>
+            <span class="chev" aria-hidden="true">⌄</span>
+          </button>
+          <a class="button button-small button-primary nav-cta" href="contacts.html#request">Приєднатися <span aria-hidden="true">↗</span></a>
+        </div>
+      </div>
+
+      <div class="theme-panel" id="themePanel" hidden>
+        <div class="theme-panel-top">
+          <b>Обери атмосферу клубу</b>
+          <span class="theme-panel-hint">Alt + T</span>
+          <button type="button" class="close-minimal" id="themeClose" aria-label="Закрити вибір тем">×</button>
+        </div>
+        <div class="theme-choices">
+          <button class="theme-choice" type="button" data-theme-choice="night" aria-label="Тема Cyber Night">
+            <img src="images/thumb-night.webp" width="400" height="200" alt="" loading="lazy" decoding="async">
+            <div class="theme-choice-meta"><i class="theme-swatch" style="background:#66f5ce"></i><span>Cyber Night</span></div>
+            <small>Неон / темна</small>
+          </button>
+          <button class="theme-choice" type="button" data-theme-choice="ember" aria-label="Тема Solar Rush">
+            <img src="images/thumb-ember.webp" width="400" height="200" alt="" loading="lazy" decoding="async">
+            <div class="theme-choice-meta"><i class="theme-swatch" style="background:#ffb36a"></i><span>Solar Rush</span></div>
+            <small>Енергія / бурштинова</small>
+          </button>
+          <button class="theme-choice" type="button" data-theme-choice="forest" aria-label="Тема Forest Motion">
+            <img src="images/thumb-forest.webp" width="400" height="200" alt="" loading="lazy" decoding="async">
+            <div class="theme-choice-meta"><i class="theme-swatch" style="background:#9ef29b"></i><span>Forest Motion</span></div>
+            <small>Біофілія / смарагдова</small>
+          </button>
+          <button class="theme-choice" type="button" data-theme-choice="ocean" aria-label="Тема Arctic Pulse">
+            <img src="images/thumb-ocean.webp" width="400" height="200" alt="" loading="lazy" decoding="async">
+            <div class="theme-choice-meta"><i class="theme-swatch" style="background:#5cc8ff"></i><span>Arctic Pulse</span></div>
+            <small>Техно / крижана синя</small>
+          </button>
+          <button class="theme-choice" type="button" data-theme-choice="day" aria-label="Тема Light Studio">
+            <img src="images/thumb-day.webp" width="400" height="200" alt="" loading="lazy" decoding="async">
+            <div class="theme-choice-meta"><i class="theme-swatch" style="background:#28664e"></i><span>Light Studio</span></div>
+            <small>Мінімалізм / світла</small>
+          </button>
+          <button class="theme-choice" type="button" data-theme-choice="auto" aria-label="Системна тема Auto Sync">
+            <img src="images/thumb-auto.webp" width="400" height="200" alt="" loading="lazy" decoding="async">
+            <div class="theme-choice-meta"><i class="theme-swatch" style="background:linear-gradient(135deg,#66f5ce,#f6f5ef)"></i><span>Auto Sync</span></div>
+            <small>Адаптація до ОС</small>
+          </button>
+        </div>
+        <p class="theme-note">
+          <span>Кожна тема змінює палітру та фонову фотографію простору.</span>
+          <span>Зберігається локально</span>
+        </p>
+      </div>
+    </header>
+
+    <main id="main">
+      <section class="page-hero">
+        <div class="page-hero-image"></div>
+        <div class="container page-hero-inside">
+          <div class="section-kicker">ЛЮДИ, ЯКІ НАДИХАЮТЬ НА РУХ</div>
+          <h1>Наші <em>тренери.</em></h1>
+          <p>Різні спеціалізації, єдиний стандарт уважності до біомеханіки руху, поступового прогресу та безпечного відновлення.</p>
+          <div class="crumbs"><a href="index.html">Головна</a><span>/</span> Тренери</div>
+        </div>
+      </section>
+
+      <section class="section container" data-reveal>
+        <div class="section-head">
+          <div>
+            <div class="section-kicker">КОМАНДА / 04 ПРОФІЛІ</div>
+            <h2>Досвід у русі.<br><span class="muted">Підтримка в дії.</span></h2>
+          </div>
+          <p>Збалансована команда тренерів та тренерок для 4 ключових напрямів клубу з переходом до занять кожного наставника.</p>
+        </div>
+
+        <div class="coach-grid">
+          <article class="coach-card" data-specialty="strength">
+            <div class="coach-visual">
+              <img src="images/coach-andriy-sm.webp"
+                   srcset="images/coach-andriy-sm.webp 480w, images/coach-andriy.webp 900w"
+                   sizes="(max-width: 680px) 92vw, (max-width: 1200px) 46vw, 320px"
+                   width="480" height="640" loading="lazy" decoding="async"
+                   alt="Андрій Савчук — тренер силових і функціональних програм">
+              <span class="coach-pill">СИЛОВІ / КОМАНДНІ</span>
+            </div>
+            <div class="coach-info">
+              <div class="coach-no">01 / HEAD STRENGTH COACH</div>
+              <h3>Андрій Савчук</h3>
+              <p>Базова силова підготовка, безпечна техніка вільних ваг та суботні командні функціональні сесії.</p>
+              <div class="coach-meta-tags">
+                <span>Силова база</span>
+                <span>Iron Friday</span>
+                <span>Weekend Team</span>
+              </div>
+              <button class="text-link coach-more" type="button" data-coach="andriy">Детальніше про підхід <span aria-hidden="true">↗</span></button>
+            </div>
+          </article>
+
+          <article class="coach-card" data-specialty="cardio">
+            <div class="coach-visual">
+              <img src="images/coach-dmytro-sm.webp"
+                   srcset="images/coach-dmytro-sm.webp 480w, images/coach-dmytro.webp 900w"
+                   sizes="(max-width: 680px) 92vw, (max-width: 1200px) 46vw, 320px"
+                   width="480" height="640" loading="lazy" decoding="async"
+                   alt="Дмитро Ковальчук — тренер кардіо, HIIT та функціонального тренінгу">
+              <span class="coach-pill">КАРДІО / HIIT / ФУНКЦІОНАЛ</span>
+            </div>
+            <div class="coach-info">
+              <div class="coach-no">02 / HIIT &amp; FUNCTIONAL COACH</div>
+              <h3>Дмитро Ковальчук</h3>
+              <p>Високоінтенсивні кардіо-інтервали, вибуховий функціонал із канатами й гирями та атлетична мобільність.</p>
+              <div class="coach-meta-tags">
+                <span>HIIT Circuit</span>
+                <span>Functional Burn</span>
+                <span>Mobility Reset</span>
+              </div>
+              <button class="text-link coach-more" type="button" data-coach="dmytro">Детальніше про підхід <span aria-hidden="true">↗</span></button>
+            </div>
+          </article>
+
+          <article class="coach-card" data-specialty="cardio">
+            <div class="coach-visual">
+              <img src="images/coach-iryna-sm.webp"
+                   srcset="images/coach-iryna-sm.webp 480w, images/coach-iryna.webp 900w"
+                   sizes="(max-width: 680px) 92vw, (max-width: 1200px) 46vw, 320px"
+                   width="480" height="640" loading="lazy" decoding="async"
+                   alt="Ірина Мельник — тренерка кардіо, витривалості та силового тонусу">
+              <span class="coach-pill">КАРДІО / СИЛОВИЙ ТОНУС</span>
+            </div>
+            <div class="coach-info">
+              <div class="coach-no">03 / ENDURANCE &amp; STRENGTH COACH</div>
+              <h3>Ірина Мельник</h3>
+              <p>Розвиток аеробної витривалості, контроль пульсових зон та силовий тонус усього тіла.</p>
+              <div class="coach-meta-tags">
+                <span>Cardio Pulse</span>
+                <span>Power Strength</span>
+                <span>Endurance Lab</span>
+              </div>
+              <button class="text-link coach-more" type="button" data-coach="iryna">Детальніше про підхід <span aria-hidden="true">↗</span></button>
+            </div>
+          </article>
+
+          <article class="coach-card" data-specialty="mind">
+            <div class="coach-visual">
+              <img src="images/coach-olena-sm.webp"
+                   srcset="images/coach-olena-sm.webp 480w, images/coach-olena.webp 900w"
+                   sizes="(max-width: 680px) 92vw, (max-width: 1200px) 46vw, 320px"
+                   width="480" height="640" loading="lazy" decoding="async"
+                   alt="Олена Дорошенко — тренерка мобільності та йоги">
+              <span class="coach-pill">МОБІЛЬНІСТЬ / ВІДНОВЛЕННЯ</span>
+            </div>
+            <div class="coach-info">
+              <div class="coach-no">04 / MOBILITY &amp; FLOW COACH</div>
+              <h3>Олена Дорошенко</h3>
+              <p>Здорова рухливість суглобів, стабілізація корпусу, розтяжка та спокійні відновлювальні практики.</p>
+              <div class="coach-meta-tags">
+                <span>Morning Flow</span>
+                <span>Core &amp; Balance</span>
+                <span>Recovery Yoga</span>
+              </div>
+              <button class="text-link coach-more" type="button" data-coach="olena">Детальніше про підхід <span aria-hidden="true">↗</span></button>
+            </div>
+          </article>
+        </div>
+
+        <div class="training-values">
+          <div><b>01</b><span>Уважність до біомеханіки та техніки</span></div>
+          <div><b>02</b><span>Поступова адаптація навантаження</span></div>
+          <div><b>03</b><span>Комфортний темп без перетренованості</span></div>
+        </div>
+      </section>
+
+      <dialog class="coach-dialog" id="coachDialog" aria-labelledby="coachDialogTitle">
+        <button type="button" id="closeCoach" class="dialog-close" aria-label="Закрити">×</button>
+        <div class="coach-dialog-header">
+          <img id="coachDialogImg" class="coach-dialog-avatar" src="images/coach-andriy-sm.webp" width="84" height="84" alt="">
+          <div>
+            <div class="section-kicker" id="coachDialogRole">ПРОФІЛЬ ТРЕНЕРА · ДЕМО</div>
+            <h2 id="coachDialogTitle"></h2>
+          </div>
+        </div>
+        <p id="coachDialogText"></p>
+        <h3>На що звертаємо увагу на заняттях</h3>
+        <ul id="coachDialogList"></ul>
+        <a class="button button-primary" id="coachDialogLink" href="schedule.html">Заняття тренера в розкладі ↗</a>
+      </dialog>
+
+      <section class="cta-band container" data-reveal>
+        <span class="cta-band-kicker">ПЕРШИЙ КРОК — НАЙВАЖЛИВІШИЙ.</span>
+        <h2>Стань сильнішим <em>щодня.</em></h2>
+        <a class="button button-dark" href="schedule.html">Переглянути розклад ↗</a>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container">
+        <div class="footer-main">
+          <div>
+            <a class="footer-brand" href="index.html">PULSE<span>FORGE</span><sup>✦</sup></a>
+            <p>Рух — це твоя суперсила. Модернізований навчальний вебсайт спортивного клубу з підтримкою 6 режимів тем.</p>
+          </div>
+          <div class="footer-links">
+            <a href="index.html">Головна</a>
+            <a href="schedule.html">Розклад</a>
+            <a href="coaches.html">Тренери</a>
+            <a href="contacts.html">Контакти</a>
+            <a href="index.html#gallery">Фотогалерея</a>
+            <a href="docs/training-guide.pdf" target="_blank" rel="noopener">PDF-гід</a>
+          </div>
+          <div class="footer-social">
+            <span>BUILD 2026 / PR15 V5 MODERN</span>
+            <a href="#top">До початку ↑</a>
+          </div>
+        </div>
+        <div class="footer-bottom">
+          <p>© 2026. Автор: <strong>Максим Ковалишин</strong>. Вміст захищено авторським правом. Усі права захищені.</p>
+          <small>Оптимізовано: HTML5 · Modern CSS · Vanilla JS · WebP</small>
+        </div>
+      </div>
+    </footer>
+  </div>
+
+  <button class="back-top" id="backTop" type="button" aria-label="Повернутися нагору">↑</button>
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+</body>
+</html>

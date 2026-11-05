@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-label="PULSEFORGE">
+  <defs>
+    <linearGradient id="pf-grad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#66f5ce"/>
+      <stop offset="100%" stop-color="#17b999"/>
+    </linearGradient>
+  </defs>
+  <polygon points="4,4 60,4 60,48 48,60 4,60" fill="#0a1018"/>
+  <polygon points="6,6 58,6 58,47 47,58 6,58" fill="url(#pf-grad)"/>
+  <text x="14" y="43" font-family="'Oswald', 'Arial Narrow', Impact, sans-serif" font-weight="800" font-size="29" letter-spacing="-1" fill="#071813">PF</text>
+  <path d="M50 11 L51.6 14.9 L55.5 16.5 L51.6 18.1 L50 22 L48.4 18.1 L44.5 16.5 L48.4 14.9 Z" fill="#071813"/>
+</svg>

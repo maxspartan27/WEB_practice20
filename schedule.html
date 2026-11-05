@@ -1,0 +1,395 @@
+<!DOCTYPE html>
+<html lang="uk" data-theme="night">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#080e16">
+  <meta name="description" content="Демонстраційний розклад силових, кардіо, функціональних та відновлювальних занять PULSEFORGE. Живі фільтри, збереження обраного та експорт у календар .ics.">
+  <meta name="author" content="Максим Ковалишин">
+  <meta property="og:title" content="Розклад тренувань | PULSEFORGE">
+  <meta property="og:description" content="Обирай день, напрям, зберігай улюблені тренування та експортуй у календар .ics.">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="PULSEFORGE_theme_preview.jpg">
+  <title>Розклад тренувань | PULSEFORGE</title>
+  <link rel="icon" type="image/svg+xml" href="favicon.svg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Oswald:wght@500;600;700&display=swap">
+  <link rel="stylesheet" href="style.css">
+  <script>try{const m=localStorage.getItem('pf-theme-v1')||'night',r=m==='auto'?(matchMedia('(prefers-color-scheme: light)').matches?'day':'night'):m;if(['night','ember','forest','ocean','day'].includes(r))document.documentElement.dataset.theme=r;}catch(e){}</script>
+  <script src="script.js" defer></script>
+</head>
+<body data-page="schedule">
+  <a class="skip-link" href="#main">Перейти до вмісту</a>
+  <div class="site-shell">
+    <header class="site-header" id="top">
+      <div class="topline">
+        <span class="signal-dot"></span> PULSEFORGE <span class="topline-sep">/</span> SPORT &amp; MOTION
+        <span class="topline-right">ПРАКТИЧНА РОБОТА №15 · ВАРІАНТ 5</span>
+      </div>
+      <div class="nav-shell container">
+        <a class="logo" href="index.html" aria-label="PULSEFORGE, головна">
+          <span class="logo-glyph">P<span>F</span><b>✦</b></span>
+          <span class="logo-word">PULSE<span>FORGE</span><small>FITNESS CLUB</small></span>
+        </a>
+        <button class="mobile-toggle" id="mobileToggle" type="button" aria-label="Відкрити меню" aria-controls="mainNav" aria-expanded="false">
+          <span></span><span></span><span></span>
+        </button>
+        <nav class="main-nav" id="mainNav" aria-label="Основна навігація">
+          <a href="index.html">Головна</a>
+          <a href="schedule.html" aria-current="page">Розклад</a>
+          <a href="coaches.html">Тренери</a>
+          <a href="contacts.html">Контакти</a>
+        </nav>
+        <div class="nav-actions">
+          <button class="theme-trigger" id="themeTrigger" type="button" aria-controls="themePanel" aria-expanded="false">
+            <span class="theme-palette" aria-hidden="true">◐</span>
+            <span>Теми</span>
+            <span class="chev" aria-hidden="true">⌄</span>
+          </button>
+          <a class="button button-small button-primary nav-cta" href="contacts.html#request">Приєднатися <span aria-hidden="true">↗</span></a>
+        </div>
+      </div>
+
+      <div class="theme-panel" id="themePanel" hidden>
+        <div class="theme-panel-top">
+          <b>Обери атмосферу клубу</b>
+          <span class="theme-panel-hint">Alt + T</span>
+          <button type="button" class="close-minimal" id="themeClose" aria-label="Закрити вибір тем">×</button>
+        </div>
+        <div class="theme-choices">
+          <button class="theme-choice" type="button" data-theme-choice="night" aria-label="Тема Cyber Night">
+            <img src="images/thumb-night.webp" width="400" height="200" alt="" loading="lazy" decoding="async">
+            <div class="theme-choice-meta"><i class="theme-swatch" style="background:#66f5ce"></i><span>Cyber Night</span></div>
+            <small>Неон / темна</small>
+          </button>
+          <button class="theme-choice" type="button" data-theme-choice="ember" aria-label="Тема Solar Rush">
+            <img src="images/thumb-ember.webp" width="400" height="200" alt="" loading="lazy" decoding="async">
+            <div class="theme-choice-meta"><i class="theme-swatch" style="background:#ffb36a"></i><span>Solar Rush</span></div>
+            <small>Енергія / бурштинова</small>
+          </button>
+          <button class="theme-choice" type="button" data-theme-choice="forest" aria-label="Тема Forest Motion">
+            <img src="images/thumb-forest.webp" width="400" height="200" alt="" loading="lazy" decoding="async">
+            <div class="theme-choice-meta"><i class="theme-swatch" style="background:#9ef29b"></i><span>Forest Motion</span></div>
+            <small>Біофілія / смарагдова</small>
+          </button>
+          <button class="theme-choice" type="button" data-theme-choice="ocean" aria-label="Тема Arctic Pulse">
+            <img src="images/thumb-ocean.webp" width="400" height="200" alt="" loading="lazy" decoding="async">
+            <div class="theme-choice-meta"><i class="theme-swatch" style="background:#5cc8ff"></i><span>Arctic Pulse</span></div>
+            <small>Техно / крижана синя</small>
+          </button>
+          <button class="theme-choice" type="button" data-theme-choice="day" aria-label="Тема Light Studio">
+            <img src="images/thumb-day.webp" width="400" height="200" alt="" loading="lazy" decoding="async">
+            <div class="theme-choice-meta"><i class="theme-swatch" style="background:#28664e"></i><span>Light Studio</span></div>
+            <small>Мінімалізм / світла</small>
+          </button>
+          <button class="theme-choice" type="button" data-theme-choice="auto" aria-label="Системна тема Auto Sync">
+            <img src="images/thumb-auto.webp" width="400" height="200" alt="" loading="lazy" decoding="async">
+            <div class="theme-choice-meta"><i class="theme-swatch" style="background:linear-gradient(135deg,#66f5ce,#f6f5ef)"></i><span>Auto Sync</span></div>
+            <small>Адаптація до ОС</small>
+          </button>
+        </div>
+        <p class="theme-note">
+          <span>Кожна тема змінює палітру та фонову фотографію простору.</span>
+          <span>Зберігається локально</span>
+        </p>
+      </div>
+    </header>
+
+    <main id="main">
+      <section class="page-hero">
+        <div class="page-hero-image"></div>
+        <div class="container page-hero-inside">
+          <div class="section-kicker">ПЛАНУЙ. РУХАЙСЯ. ПОВТОРЮЙ.</div>
+          <h1>Розклад <em>тренувань.</em></h1>
+          <p>Фільтруй заняття за днем чи тренером, відмічай улюблені зірочкою ★ та експортуй свій план у календар одним кліком.</p>
+          <div class="crumbs"><a href="index.html">Головна</a><span>/</span> Розклад</div>
+        </div>
+      </section>
+
+      <section class="section container schedule-section" data-reveal>
+        <div class="section-head compact">
+          <div>
+            <div class="section-kicker">12 ЗАНЯТЬ / 7 ДНІВ</div>
+            <h2>Обери свій <span class="muted">ритм.</span></h2>
+          </div>
+          <div class="schedule-hint">
+            <span class="signal-dot"></span>
+            <span id="nextTraining">Пошук найближчого заняття…</span>
+          </div>
+        </div>
+
+        <div class="filter-panel">
+          <label class="search-field">
+            <span aria-hidden="true">⌕</span>
+            <input type="search" id="scheduleSearch" autocomplete="off" placeholder="Знайти тренування, день або ім'я тренера…" aria-label="Пошук занять">
+          </label>
+          <label class="day-field">
+            <span>День:</span>
+            <select id="dayFilter">
+              <option value="all">Усі дні</option>
+              <option value="mon">Понеділок</option>
+              <option value="tue">Вівторок</option>
+              <option value="wed">Середа</option>
+              <option value="thu">Четвер</option>
+              <option value="fri">П’ятниця</option>
+              <option value="sat">Субота</option>
+              <option value="sun">Неділя</option>
+            </select>
+          </label>
+        </div>
+
+        <div class="filter-chips" role="group" aria-label="Фільтр за напрямом">
+          <button class="filter-chip active" type="button" data-filter="all">Усі напрямки</button>
+          <button class="filter-chip" type="button" data-filter="strength">Силові</button>
+          <button class="filter-chip" type="button" data-filter="cardio">Кардіо</button>
+          <button class="filter-chip" type="button" data-filter="functional">Функціональні</button>
+          <button class="filter-chip" type="button" data-filter="mind">Відновлення</button>
+          <button class="filter-chip" type="button" data-filter="saved">★ Мій план (<span id="savedCount">0</span>)</button>
+        </div>
+
+        <div class="table-summary">
+          <p>Знайдено: <strong id="resultsCount">12</strong> занять</p>
+          <div class="summary-actions">
+            <button class="text-button" type="button" id="exportSavedIcs" hidden>↓ Експортувати мій план (.ics)</button>
+            <button class="text-button" type="button" id="clearFilters">Скинути фільтри ↺</button>
+          </div>
+        </div>
+
+        <div class="table-shell">
+          <table class="schedule-table">
+            <thead>
+              <tr>
+                <th scope="col">День</th>
+                <th scope="col">Час</th>
+                <th scope="col">Тренування</th>
+                <th scope="col">Тренер</th>
+                <th scope="col">Тривалість</th>
+                <th scope="col">Рівень</th>
+                <th scope="col">Дії</th>
+              </tr>
+            </thead>
+            <tbody id="scheduleBody">
+              <tr data-day="mon" data-category="strength" data-search="силова база андрій савчук понеділок силові">
+                <td data-label="День"><span class="day-name">Понеділок</span></td>
+                <td data-label="Час"><strong class="time-name">07:30</strong></td>
+                <td data-label="Тренування"><span class="class-title">Силова база</span><span class="tag tag-strength">Силові</span></td>
+                <td data-label="Тренер">Андрій Савчук</td>
+                <td data-label="Тривалість">60 хв</td>
+                <td data-label="Рівень">Усі рівні</td>
+                <td data-label="Дії">
+                  <div class="row-actions">
+                    <button class="save-star" type="button" data-save="0" aria-pressed="false" aria-label="Зберегти Силова база">☆</button>
+                    <button class="tiny-button" type="button" data-calendar="0" aria-label="Додати Силова база до календаря">+ <span>До календаря</span></button>
+                  </div>
+                </td>
+              </tr>
+              <tr data-day="mon" data-category="functional" data-search="functional burn дмитро ковальчук понеділок функціональні">
+                <td data-label="День"><span class="day-name">Понеділок</span></td>
+                <td data-label="Час"><strong class="time-name">18:00</strong></td>
+                <td data-label="Тренування"><span class="class-title">Functional Burn</span><span class="tag tag-functional">Функціональні</span></td>
+                <td data-label="Тренер">Дмитро Ковальчук</td>
+                <td data-label="Тривалість">50 хв</td>
+                <td data-label="Рівень">Середній</td>
+                <td data-label="Дії">
+                  <div class="row-actions">
+                    <button class="save-star" type="button" data-save="1" aria-pressed="false" aria-label="Зберегти Functional Burn">☆</button>
+                    <button class="tiny-button" type="button" data-calendar="1" aria-label="Додати Functional Burn до календаря">+ <span>До календаря</span></button>
+                  </div>
+                </td>
+              </tr>
+              <tr data-day="tue" data-category="mind" data-search="morning flow олена дорошенко вівторок відновлення">
+                <td data-label="День"><span class="day-name">Вівторок</span></td>
+                <td data-label="Час"><strong class="time-name">08:30</strong></td>
+                <td data-label="Тренування"><span class="class-title">Morning Flow</span><span class="tag tag-mind">Відновлення</span></td>
+                <td data-label="Тренер">Олена Дорошенко</td>
+                <td data-label="Тривалість">55 хв</td>
+                <td data-label="Рівень">Усі рівні</td>
+                <td data-label="Дії">
+                  <div class="row-actions">
+                    <button class="save-star" type="button" data-save="2" aria-pressed="false" aria-label="Зберегти Morning Flow">☆</button>
+                    <button class="tiny-button" type="button" data-calendar="2" aria-label="Додати Morning Flow до календаря">+ <span>До календаря</span></button>
+                  </div>
+                </td>
+              </tr>
+              <tr data-day="tue" data-category="cardio" data-search="cardio pulse ірина мельник вівторок кардіо">
+                <td data-label="День"><span class="day-name">Вівторок</span></td>
+                <td data-label="Час"><strong class="time-name">19:00</strong></td>
+                <td data-label="Тренування"><span class="class-title">Cardio Pulse</span><span class="tag tag-cardio">Кардіо</span></td>
+                <td data-label="Тренер">Ірина Мельник</td>
+                <td data-label="Тривалість">45 хв</td>
+                <td data-label="Рівень">Усі рівні</td>
+                <td data-label="Дії">
+                  <div class="row-actions">
+                    <button class="save-star" type="button" data-save="3" aria-pressed="false" aria-label="Зберегти Cardio Pulse">☆</button>
+                    <button class="tiny-button" type="button" data-calendar="3" aria-label="Додати Cardio Pulse до календаря">+ <span>До календаря</span></button>
+                  </div>
+                </td>
+              </tr>
+              <tr data-day="wed" data-category="strength" data-search="power strength ірина мельник середа силові">
+                <td data-label="День"><span class="day-name">Середа</span></td>
+                <td data-label="Час"><strong class="time-name">09:00</strong></td>
+                <td data-label="Тренування"><span class="class-title">Power Strength</span><span class="tag tag-strength">Силові</span></td>
+                <td data-label="Тренер">Ірина Мельник</td>
+                <td data-label="Тривалість">60 хв</td>
+                <td data-label="Рівень">Середній</td>
+                <td data-label="Дії">
+                  <div class="row-actions">
+                    <button class="save-star" type="button" data-save="4" aria-pressed="false" aria-label="Зберегти Power Strength">☆</button>
+                    <button class="tiny-button" type="button" data-calendar="4" aria-label="Додати Power Strength до календаря">+ <span>До календаря</span></button>
+                  </div>
+                </td>
+              </tr>
+              <tr data-day="wed" data-category="mind" data-search="mobility reset дмитро ковальчук середа відновлення">
+                <td data-label="День"><span class="day-name">Середа</span></td>
+                <td data-label="Час"><strong class="time-name">18:30</strong></td>
+                <td data-label="Тренування"><span class="class-title">Mobility Reset</span><span class="tag tag-mind">Відновлення</span></td>
+                <td data-label="Тренер">Дмитро Ковальчук</td>
+                <td data-label="Тривалість">45 хв</td>
+                <td data-label="Рівень">Початківець</td>
+                <td data-label="Дії">
+                  <div class="row-actions">
+                    <button class="save-star" type="button" data-save="5" aria-pressed="false" aria-label="Зберегти Mobility Reset">☆</button>
+                    <button class="tiny-button" type="button" data-calendar="5" aria-label="Додати Mobility Reset до календаря">+ <span>До календаря</span></button>
+                  </div>
+                </td>
+              </tr>
+              <tr data-day="thu" data-category="cardio" data-search="hiit circuit дмитро ковальчук четвер кардіо">
+                <td data-label="День"><span class="day-name">Четвер</span></td>
+                <td data-label="Час"><strong class="time-name">07:30</strong></td>
+                <td data-label="Тренування"><span class="class-title">HIIT Circuit</span><span class="tag tag-cardio">Кардіо</span></td>
+                <td data-label="Тренер">Дмитро Ковальчук</td>
+                <td data-label="Тривалість">45 хв</td>
+                <td data-label="Рівень">Середній</td>
+                <td data-label="Дії">
+                  <div class="row-actions">
+                    <button class="save-star" type="button" data-save="6" aria-pressed="false" aria-label="Зберегти HIIT Circuit">☆</button>
+                    <button class="tiny-button" type="button" data-calendar="6" aria-label="Додати HIIT Circuit до календаря">+ <span>До календаря</span></button>
+                  </div>
+                </td>
+              </tr>
+              <tr data-day="thu" data-category="functional" data-search="core &amp; balance олена дорошенко четвер функціональні">
+                <td data-label="День"><span class="day-name">Четвер</span></td>
+                <td data-label="Час"><strong class="time-name">19:00</strong></td>
+                <td data-label="Тренування"><span class="class-title">Core &amp; Balance</span><span class="tag tag-functional">Функціональні</span></td>
+                <td data-label="Тренер">Олена Дорошенко</td>
+                <td data-label="Тривалість">50 хв</td>
+                <td data-label="Рівень">Усі рівні</td>
+                <td data-label="Дії">
+                  <div class="row-actions">
+                    <button class="save-star" type="button" data-save="7" aria-pressed="false" aria-label="Зберегти Core &amp; Balance">☆</button>
+                    <button class="tiny-button" type="button" data-calendar="7" aria-label="Додати Core &amp; Balance до календаря">+ <span>До календаря</span></button>
+                  </div>
+                </td>
+              </tr>
+              <tr data-day="fri" data-category="strength" data-search="iron friday андрій савчук п’ятниця п'ятниця силові">
+                <td data-label="День"><span class="day-name">П’ятниця</span></td>
+                <td data-label="Час"><strong class="time-name">08:00</strong></td>
+                <td data-label="Тренування"><span class="class-title">Iron Friday</span><span class="tag tag-strength">Силові</span></td>
+                <td data-label="Тренер">Андрій Савчук</td>
+                <td data-label="Тривалість">60 хв</td>
+                <td data-label="Рівень">Середній</td>
+                <td data-label="Дії">
+                  <div class="row-actions">
+                    <button class="save-star" type="button" data-save="8" aria-pressed="false" aria-label="Зберегти Iron Friday">☆</button>
+                    <button class="tiny-button" type="button" data-calendar="8" aria-label="Додати Iron Friday до календаря">+ <span>До календаря</span></button>
+                  </div>
+                </td>
+              </tr>
+              <tr data-day="fri" data-category="cardio" data-search="endurance lab ірина мельник п’ятниця п'ятниця кардіо">
+                <td data-label="День"><span class="day-name">П’ятниця</span></td>
+                <td data-label="Час"><strong class="time-name">18:00</strong></td>
+                <td data-label="Тренування"><span class="class-title">Endurance Lab</span><span class="tag tag-cardio">Кардіо</span></td>
+                <td data-label="Тренер">Ірина Мельник</td>
+                <td data-label="Тривалість">50 хв</td>
+                <td data-label="Рівень">Усі рівні</td>
+                <td data-label="Дії">
+                  <div class="row-actions">
+                    <button class="save-star" type="button" data-save="9" aria-pressed="false" aria-label="Зберегти Endurance Lab">☆</button>
+                    <button class="tiny-button" type="button" data-calendar="9" aria-label="Додати Endurance Lab до календаря">+ <span>До календаря</span></button>
+                  </div>
+                </td>
+              </tr>
+              <tr data-day="sat" data-category="functional" data-search="weekend team андрій савчук субота функціональні">
+                <td data-label="День"><span class="day-name">Субота</span></td>
+                <td data-label="Час"><strong class="time-name">10:00</strong></td>
+                <td data-label="Тренування"><span class="class-title">Weekend Team</span><span class="tag tag-functional">Функціональні</span></td>
+                <td data-label="Тренер">Андрій Савчук</td>
+                <td data-label="Тривалість">60 хв</td>
+                <td data-label="Рівень">Усі рівні</td>
+                <td data-label="Дії">
+                  <div class="row-actions">
+                    <button class="save-star" type="button" data-save="10" aria-pressed="false" aria-label="Зберегти Weekend Team">☆</button>
+                    <button class="tiny-button" type="button" data-calendar="10" aria-label="Додати Weekend Team до календаря">+ <span>До календаря</span></button>
+                  </div>
+                </td>
+              </tr>
+              <tr data-day="sun" data-category="mind" data-search="recovery yoga олена дорошенко неділя відновлення">
+                <td data-label="День"><span class="day-name">Неділя</span></td>
+                <td data-label="Час"><strong class="time-name">10:30</strong></td>
+                <td data-label="Тренування"><span class="class-title">Recovery Yoga</span><span class="tag tag-mind">Відновлення</span></td>
+                <td data-label="Тренер">Олена Дорошенко</td>
+                <td data-label="Тривалість">60 хв</td>
+                <td data-label="Рівень">Початківець</td>
+                <td data-label="Дії">
+                  <div class="row-actions">
+                    <button class="save-star" type="button" data-save="11" aria-pressed="false" aria-label="Зберегти Recovery Yoga">☆</button>
+                    <button class="tiny-button" type="button" data-calendar="11" aria-label="Додати Recovery Yoga до календаря">+ <span>До календаря</span></button>
+                  </div>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+
+          <div class="empty-state" id="scheduleEmpty" hidden>
+            <span>⌕</span>
+            <h3>Занять за цим запитом не знайдено</h3>
+            <p>Спробуй змінити день, категорію або очистити пошуковий фільтр.</p>
+          </div>
+        </div>
+
+        <div class="schedule-footnote">
+          <span>i</span>
+          <p><strong>Навчальний приклад.</strong> Розклад є демонстраційним. Ти можеш відмічати улюблені заняття зірочкою ★ та експортувати одне або всі обрані тренування у стандартний календарний файл <code>.ics</code> (Google Calendar, Apple Calendar, Outlook).</p>
+        </div>
+      </section>
+
+      <section class="cta-band container" data-reveal>
+        <span class="cta-band-kicker">ПЛАН Є. ЧАС ДІЯТИ.</span>
+        <h2>Знайди свій <em>формат.</em></h2>
+        <a class="button button-dark" href="coaches.html">Наша команда ↗</a>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container">
+        <div class="footer-main">
+          <div>
+            <a class="footer-brand" href="index.html">PULSE<span>FORGE</span><sup>✦</sup></a>
+            <p>Рух — це твоя суперсила. Модернізований навчальний вебсайт спортивного клубу з підтримкою 6 режимів тем.</p>
+          </div>
+          <div class="footer-links">
+            <a href="index.html">Головна</a>
+            <a href="schedule.html">Розклад</a>
+            <a href="coaches.html">Тренери</a>
+            <a href="contacts.html">Контакти</a>
+            <a href="index.html#gallery">Фотогалерея</a>
+            <a href="docs/training-guide.pdf" target="_blank" rel="noopener">PDF-гід</a>
+          </div>
+          <div class="footer-social">
+            <span>BUILD 2026 / PR15 V5 MODERN</span>
+            <a href="#top">До початку ↑</a>
+          </div>
+        </div>
+        <div class="footer-bottom">
+          <p>© 2026. Автор: <strong>Максим Ковалишин</strong>. Вміст захищено авторським правом. Усі права захищені.</p>
+          <small>Оптимізовано: HTML5 · Modern CSS · Vanilla JS · WebP</small>
+        </div>
+      </div>
+    </footer>
+  </div>
+
+  <button class="back-top" id="backTop" type="button" aria-label="Повернутися нагору">↑</button>
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+</body>
+</html>
